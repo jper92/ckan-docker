@@ -36,3 +36,4 @@ RUN for d in ${APP_DIR}/patches/*; do \
             done ; \
         fi ; \
     done
+EXPOSE 5000

@@ -7,6 +7,7 @@ services:
       dockerfile: Dockerfile.dev
       args:
         - TZ=${TZ}
+    platform: linux/amd64
     env_file:
       - .env
     links:
@@ -19,7 +20,6 @@ services:
     volumes:
       - ./src:/srv/app/src_extensions
       - ckan_storage:/var/lib/ckan
-    
 
   datapusher:
     container_name: datapusher
@@ -40,6 +40,7 @@ services:
     container_name: solr
     build:
       context: solr/
+    platform: linux/amd64
     ports:
       - "8983:8983"
     volumes:
