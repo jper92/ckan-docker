@@ -23,7 +23,7 @@ services:
 
   datapusher:
     container_name: datapusher
-    image: kowhai/datapusher:0.0.17
+    image: clementmouchet/datapusher
     ports:
       - "8800:8800"
 
